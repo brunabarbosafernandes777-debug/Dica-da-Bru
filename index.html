@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Guia Como encontrar produtos que vendem na Shopee, da Dica da Bru: método de 100 pontos, checklists, modelos e planilha.">
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>Dica da Bru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;700&display=swap">
+<style>
+/* Layout: coluna única de leitura, hero em duas colunas no desktop; teal profundo + coral como único acento */
+:root{
+  --bg:#F3F7F6; --fg:#14292A; --muted:#51666A; --card:#FFFFFF; --line:#D3DFDD; --soft:#E4EFEC;
+  --teal:#0F3D3E; --accent:#D9470F; --on-accent:#FFFFFF; --hero-bg:#0F3D3E; --hero-fg:#FFFFFF; --hero-muted:#BFD6D3;
+  --ok:#1E8E5A; --mid:#B97A00; --warn-bg:#FFF1E8; --warn-fg:#7A2E0C;
+  --display:'Bricolage Grotesque','Trebuchet MS',Arial,sans-serif; --body:'Figtree','Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B2223; --fg:#E9F2F0; --muted:#9FB6B3; --card:#123436; --line:#26504F; --soft:#173F40;
+  --teal:#7FD0C6; --accent:#FF8A4C; --on-accent:#0B2223; --hero-bg:#0F3D3E; --hero-fg:#FFFFFF; --hero-muted:#BFD6D3;
+  --ok:#4CC38A; --mid:#E8A21F; --warn-bg:#3A2418; --warn-fg:#FFC9A8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B2223; --fg:#E9F2F0; --muted:#9FB6B3; --card:#123436; --line:#26504F; --soft:#173F40;
+  --teal:#7FD0C6; --accent:#FF8A4C; --on-accent:#0B2223; --hero-bg:#0F3D3E; --hero-fg:#FFFFFF; --hero-muted:#BFD6D3;
+  --ok:#4CC38A; --mid:#E8A21F; --warn-bg:#3A2418; --warn-fg:#FFC9A8; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--body);padding-inline:0}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.08;margin:0}
+p{margin:0}
+.wrap{width:100%;max-width:1040px;margin-inline:auto;padding-inline:20px}
+section{padding-block:56px}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+h2{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.02em;margin-top:8px}
+.lead{color:var(--muted);max-width:60ch;margin-top:14px}
+
+/* topo */
+.top{background:var(--hero-bg);color:var(--hero-fg)}
+.top .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em}
+.brand i{font-style:normal;color:#FF8A4C}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--on-accent);font:700 18px/1 var(--body);text-decoration:none;border-radius:12px;padding:18px 28px;min-height:56px;text-align:center}
+.btn:hover{filter:brightness(1.06)}
+.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #FFB38A;outline-offset:3px}
+.btn.small{font-size:15px;padding:12px 18px;min-height:44px}
+.top .btn{background:#FF8A4C;color:#0B2223}
+
+/* hero */
+.hero{padding-block:28px 56px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(38px,7vw,64px);font-weight:800;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:#FF8A4C}
+.hero .sub{color:var(--hero-muted);font-size:19px;margin-top:18px;max-width:52ch}
+.hero .cta-row{display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:28px}
+.hero .micro{color:var(--hero-muted);font-size:14px}
+.price{display:flex;align-items:baseline;gap:10px;margin-top:22px}
+.price strong{font-family:var(--display);font-size:44px;font-weight:800}
+.price span{color:var(--hero-muted);font-size:15px}
+
+.board{background:var(--card);color:#14292A;border-radius:18px;padding:22px;box-shadow:0 18px 40px rgba(0,0,0,.28);min-width:0}
+.board h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#51666A;font-family:var(--body);font-weight:700}
+.board .r{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#EEF4F2;border-radius:10px;padding:11px 14px;margin-top:10px;font-weight:700;font-size:16px}
+.board .r b{color:#fff;border-radius:999px;padding:3px 14px;font-size:16px}
+.b-ok{background:#1E8E5A}.b-mid{background:#B97A00}
+.board small{display:block;color:#51666A;font-size:13px;margin-top:12px}
+.board .dec{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;font-size:13px;font-weight:700}
+.board .dec span{padding:3px 10px;border-radius:999px;background:#E4EFEC;color:#0F3D3E}
+
+/* problema */
+.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.pain{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0}
+.pain h3{font-size:20px;font-weight:600}
+.pain p{color:var(--muted);margin-top:8px;font-size:16px}
+
+/* conta */
+.math{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:28px}
+.math .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.calc{min-width:0}
+.calc h3{font-size:15px;font-family:var(--body);font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.calc dl{margin:10px 0 0;display:grid;grid-template-columns:1fr auto;gap:6px 14px;font-size:16px;font-variant-numeric:tabular-nums}
+.calc dt{color:var(--muted)}.calc dd{margin:0;text-align:right}
+.calc .tot{grid-column:1/-1;border-top:1px solid var(--line);padding-top:10px;margin-top:4px;display:flex;justify-content:space-between;font-weight:700;font-size:20px}
+.calc .good{color:var(--ok)}.calc .thin{color:var(--mid)}
+.note{margin-top:16px;color:var(--muted);font-size:14px}
+
+/* kit */
+.kit{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.item .tag{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.05em;text-transform:uppercase}
+.item h3{font-size:21px;font-weight:600}
+.item p{color:var(--muted);font-size:16px}
+.item.wide{grid-column:1/-1;background:var(--soft)}
+
+/* capítulos */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px;margin-top:12px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style-position:inside;min-height:44px}
+.chap{columns:2;column-gap:32px;padding:0 0 14px 0;margin:0;list-style:none;color:var(--muted);font-size:16px}
+.chap li{break-inside:avoid;padding:3px 0}
+.chap b{color:var(--fg);font-variant-numeric:tabular-nums}
+
+/* para quem */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.box{border-radius:14px;padding:22px;border:1px solid var(--line);background:var(--card);min-width:0}
+.box h3{font-size:20px;font-weight:600}
+.box ul{margin:12px 0 0;padding-left:20px;color:var(--muted);font-size:16px}
+.box li{margin-top:6px}
+.box.no{background:var(--warn-bg);border-color:transparent}
+.box.no ul,.box.no h3{color:var(--warn-fg)}
+
+/* garantia + cta final */
+.final{background:var(--hero-bg);color:var(--hero-fg);border-radius:20px;padding:40px 28px;text-align:center}
+.final h2{color:var(--hero-fg);margin-top:0}
+.final p{color:var(--hero-muted);max-width:52ch;margin:14px auto 0}
+.final .btn{margin-top:24px;background:#FF8A4C;color:#0B2223}
+.final .micro{font-size:14px;margin-top:14px}
+
+footer{padding-block:36px 120px;color:var(--muted);font-size:14px}
+footer p+p{margin-top:8px}
+.mail{user-select:all;color:var(--fg);font-weight:700}
+
+/* barra fixa no celular */
+.sticky{position:fixed;left:0;right:0;bottom:0;display:none;background:var(--card);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));gap:12px;align-items:center;justify-content:space-between;z-index:5}
+.sticky span{font-weight:700;font-size:15px;line-height:1.2}
+.sticky small{display:block;color:var(--muted);font-weight:400}
+.sticky .btn{padding:12px 20px;min-height:48px;font-size:16px}
+
+@media (max-width:820px){
+  .hero .grid,.pains,.two,.math .cols,.kit{grid-template-columns:1fr}
+  .chap{columns:1}
+  section{padding-block:44px}
+  .sticky{display:flex}
+}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s}}
+</style>
+
+<header class="top">
+  <div class="wrap bar">
+    <div class="brand">Dica da <i>Bru</i></div>
+    <a class="btn small cta" href="#comprar">Quero o guia</a>
+  </div>
+  <div class="wrap hero">
+    <div class="grid">
+      <div>
+        <h1>Pare de chutar o que vender na <em>Shopee</em>.</h1>
+        <p class="sub">Um método de 100 pontos para escolher produto com conta, concorrência e risco na mesa, antes de gastar com estoque.</p>
+        <div class="price"><strong>R$ 19,90</strong><span>pagamento único</span></div>
+        <div class="cta-row">
+          <a class="btn cta" href="#comprar">Quero o guia por R$ 19,90</a>
+          <span class="micro">Acesso liberado após a confirmação do pagamento. Garantia de 7 dias.</span>
+        </div>
+      </div>
+      <aside class="board" aria-label="Exemplo do placar de produtos">
+        <h3>Placar de produtos</h3>
+        <div class="r"><span>Kit 3 panos de prato</span><b class="b-ok">82</b></div>
+        <div class="r"><span>Organizador de gaveta</span><b class="b-mid">72</b></div>
+        <div class="r"><span>Capinha genérica</span><b class="b-mid">71</b></div>
+        <div class="dec"><span>75+ testar</span><span>60 a 74 ajustar</span><span>abaixo de 60 descartar</span></div>
+        <small>Exemplo ilustrativo com produtos fictícios.</small>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+<section><div class="wrap">
+  <div class="eyebrow">O problema</div>
+  <h2>Vender muito não é o mesmo que lucrar</h2>
+  <p class="lead">Um produto pode vender milhares de unidades e deixar zero para quem vende. Comissão, taxa fixa, frete, devolução e guerra de preço comem a margem. Quem escolhe só pelo ranking costuma descobrir isso depois de comprar o estoque.</p>
+  <div class="pains">
+    <div class="pain"><h3>Copiar o ranking</h3><p>Todo mundo vê a mesma lista de mais vendidos e corre para os mesmos produtos.</p></div>
+    <div class="pain"><h3>Esquecer as taxas</h3><p>O preço de venda parece bom até a comissão, a taxa fixa e os anúncios entrarem na conta.</p></div>
+    <div class="pain"><h3>Lote grande de cara</h3><p>Sem teste pequeno e sem critério de parada, o erro fica caro e encalhado.</p></div>
+  </div>
+</div></section>
+
+<section style="background:var(--soft)"><div class="wrap">
+  <div class="eyebrow">Por que a conta importa</div>
+  <h2>O mesmo produto, dois preços</h2>
+  <p class="lead">Exemplo do guia, com comissão de 20%, anúncios de 5% e taxa fixa de R$ 4,50. Se o concorrente baixa o preço, a sua margem some rápido.</p>
+  <div class="math">
+    <div class="cols">
+      <div class="calc">
+        <h3>Vendendo a R$ 40,00</h3>
+        <dl>
+          <dt>Comissão (20%)</dt><dd>R$ 8,00</dd>
+          <dt>Anúncios (5%)</dt><dd>R$ 2,00</dd>
+          <dt>Taxa fixa</dt><dd>R$ 4,50</dd>
+          <dt>Custo do produto</dt><dd>R$ 18,00</dd>
+          <dt>Embalagem</dt><dd>R$ 1,50</dd>
+          <div class="tot good"><span>Lucro</span><span>R$ 6,00 (15%)</span></div>
+        </dl>
+      </div>
+      <div class="calc">
+        <h3>Concorrente baixa para R$ 35,00</h3>
+        <dl>
+          <dt>Comissão (20%)</dt><dd>R$ 7,00</dd>
+          <dt>Anúncios (5%)</dt><dd>R$ 1,75</dd>
+          <dt>Taxa fixa</dt><dd>R$ 4,50</dd>
+          <dt>Custo do produto</dt><dd>R$ 18,00</dd>
+          <dt>Embalagem</dt><dd>R$ 1,50</dd>
+          <div class="tot thin"><span>Lucro</span><span>R$ 2,25 (6%)</span></div>
+        </dl>
+      </div>
+    </div>
+    <p class="note">Valores de exemplo, baseados em fontes públicas de 2026. Taxas mudam: confirme sempre na Central do Vendedor.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">O que você recebe</div>
+  <h2>Um método e as ferramentas para aplicar</h2>
+  <div class="kit">
+    <div class="item wide"><span class="tag">E-book em PDF</span><h3>Como encontrar produtos que vendem (23 páginas)</h3><p>20 capítulos: de onde tirar ideias, como ler a busca da Shopee, estimar demanda, analisar concorrência, calcular margem, checar logística e risco, e montar o placar de 100 pontos.</p></div>
+    <div class="item"><span class="tag">3 checklists (4 páginas)</span><h3>Para imprimir e marcar</h3><p>Validação do produto, análise da concorrência e teste de mercado de 14 dias.</p></div>
+    <div class="item"><span class="tag">5 modelos (6 páginas)</span><h3>Fichas e mensagens prontas</h3><p>Ficha de produto e de concorrente, mensagens para fornecedores, relatório do teste e perguntas para ouvir clientes.</p></div>
+    <div class="item"><span class="tag">Planilha com 4 abas</span><h3>Placar, concorrentes, calendário e teste</h3><p>A margem vira nota sozinha e a planilha indica testar, ajustar ou descartar. Calcula também a data limite para comprar estoque de cada data de pico.</p></div>
+    <div class="item"><span class="tag">Roteiro e slides</span><h3>Resumo em 9 slides</h3><p>Roteiro de cerca de 5 minutos nas notas de cada slide. Serve para você gravar ou narrar. Não é uma videoaula gravada.</p></div>
+  </div>
+</div></section>
+
+<section style="background:var(--soft)"><div class="wrap">
+  <div class="eyebrow">Prévia do conteúdo</div>
+  <h2>O que tem dentro do e-book</h2>
+  <details>
+    <summary>Ver os 20 capítulos</summary>
+    <ol class="chap" style="padding-left:0">
+      <li><b>1.</b> Vender não é o mesmo que lucrar</li><li><b>2.</b> O seu perfil define o produto</li>
+      <li><b>3.</b> Onde procurar ideias</li><li><b>4.</b> Lendo a busca da Shopee</li>
+      <li><b>5.</b> Dados dentro da Central do Vendedor</li><li><b>6.</b> Sazonalidade e calendário</li>
+      <li><b>7.</b> Estimando a demanda</li><li><b>8.</b> Analisando a concorrência</li>
+      <li><b>9.</b> Margem antes de se apaixonar</li><li><b>10.</b> Logística: peso, tamanho e devolução</li>
+      <li><b>11.</b> Validando o fornecedor</li><li><b>12.</b> Riscos: marcas, regulação e proibidos</li>
+      <li><b>13.</b> Categorias populares: prós e contras</li><li><b>14.</b> Como se diferenciar</li>
+      <li><b>15.</b> O placar de 100 pontos</li><li><b>16.</b> Exemplo: comparando 3 produtos</li>
+      <li><b>17.</b> Teste de mercado barato</li><li><b>18.</b> Erros comuns na escolha</li>
+      <li><b>19.</b> Plano de 7 dias</li><li><b>20.</b> Glossário e próximos passos</li>
+    </ol>
+  </details>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Para quem é</div>
+  <h2>Veja se faz sentido para você</h2>
+  <div class="two">
+    <div class="box"><h3>É para você se</h3>
+      <ul><li>vende ou quer começar a vender na Shopee e não sabe qual produto escolher;</li><li>quer decidir com números, sem depender de achismo;</li><li>prefere testar com um lote pequeno antes de investir mais.</li></ul></div>
+    <div class="box no"><h3>Não é para você se</h3>
+      <ul><li>procura promessa de dinheiro rápido ou lista pronta de produtos "vencedores";</li><li>espera uma videoaula gravada;</li><li>não pretende fazer as contas e os testes.</li></ul></div>
+  </div>
+</div></section>
+
+<section style="background:var(--soft)"><div class="wrap">
+  <div class="eyebrow">Perguntas frequentes</div>
+  <h2>Antes de comprar</h2>
+  <details><summary>Como eu recebo o material?</summary><p style="padding-bottom:16px;color:var(--muted)">O acesso é liberado pela Kiwify depois da confirmação do pagamento. Você baixa o e-book, os checklists, os modelos, a planilha e os slides.</p></details>
+  <details><summary>O guia garante que eu vou vender?</summary><p style="padding-bottom:16px;color:var(--muted)">Não. O guia ensina um método para reduzir risco e errar barato. O resultado depende do produto, do preço, da concorrência, da época e da sua execução. Nenhum material consegue garantir vendas ou lucro.</p></details>
+  <details><summary>Tem videoaula?</summary><p style="padding-bottom:16px;color:var(--muted)">Não. Você recebe o roteiro e os slides de um vídeo-resumo, que podem ser usados para você mesmo gravar ou narrar.</p></details>
+  <details><summary>As taxas do guia estão atualizadas?</summary><p style="padding-bottom:16px;color:var(--muted)">Os números usados nos exemplos vêm de fontes públicas de 2026 e podem mudar. A planilha deixa as taxas editáveis e o guia orienta a confirmar tudo na Central do Vendedor.</p></details>
+  <details><summary>Preciso de CNPJ ou MEI?</summary><p style="padding-bottom:16px;color:var(--muted)">Depende do seu cadastro na Shopee e da sua situação fiscal. O guia não substitui um contador. Em caso de dúvida, consulte um profissional.</p></details>
+  <details><summary>Esse material é oficial da Shopee?</summary><p style="padding-bottom:16px;color:var(--muted)">Não. É um material educativo independente, sem vínculo, patrocínio ou endosso da Shopee.</p></details>
+  <details><summary>E se eu não gostar?</summary><p style="padding-bottom:16px;color:var(--muted)">Você tem 7 dias de garantia. Se não gostar, peça o reembolso pela Kiwify dentro desse prazo.</p></details>
+</div></section>
+
+<section id="comprar"><div class="wrap">
+  <div class="final">
+    <h2>Escolha o próximo produto com conta, não com chute</h2>
+    <p>Placar de 100 pontos, checklists, modelos, planilha e teste de 14 dias por um pagamento único de R$ 19,90.</p>
+    <a class="btn cta" href="#comprar">Quero o guia por R$ 19,90</a>
+    <p class="micro">Garantia de 7 dias. Acesso após a confirmação do pagamento.</p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p><b>Dica da Bru</b>. Contato: <span class="mail">brunabarbosafernandes7@gmail.com</span></p>
+  <p>Material educativo independente. Não é afiliado, patrocinado ou endossado pela Shopee, e "Shopee" é marca de seus titulares. Este material não garante vendas, faturamento ou lucro e não substitui orientação contábil ou jurídica. Os exemplos usam produtos e números fictícios.</p>
+  <p>Taxas, regras e menus da plataforma mudam. Confirme tudo na Central do Vendedor.</p>
+</div></footer>
+
+<div class="sticky"><span>R$ 19,90<small>pagamento único</small></span><a class="btn cta" href="#comprar">Quero o guia</a></div>
+
+<script>
+/* Troque este endereço pelo link de checkout da Kiwify. Todos os botões "Quero o guia" usam esta constante. */
+var KIWIFY_URL = "";
+(function(){
+  if(!KIWIFY_URL) return;
+  var els = document.querySelectorAll("a.cta");
+  for(var i=0;i<els.length;i++){ els[i].setAttribute("href", KIWIFY_URL); els[i].setAttribute("rel","noopener"); }
+})();
+</script>
+
+</body>
+</html>
